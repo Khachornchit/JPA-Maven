@@ -10,7 +10,7 @@ public class Operation {
     public static void main(String[] args) {
  
         EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("EmployeePU");
+                .createEntityManagerFactory("EmployeeManager");
         em = emf.createEntityManager();
  
         createEmployee(1, "Ravi", "Raj", "Textile");

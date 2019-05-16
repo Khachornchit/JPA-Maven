@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<persistence 
-	xmlns=<a class="vglnk" href="http://java.sun.com/xml/ns/persistence" rel="nofollow">
-    xmlns:xsi="<a class="vglnk" href="http://www.w3.org/2001/XMLSchema-instance" rel="nofollow">
-    xsi:schemaLocation="<a class="vglnk" href="http://java.sun.com/xml/ns/persistence" rel="nofollow">
-             <a class="vglnk" href="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" rel="nofollow">
-    version="2.0">
- 
-    <persistence-unit name="Employee">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/myCoffeeJPA?useSSL=false&amp;serverTimezone=UTC&amp;createDatabaseIfNotExist=true&amp;" />
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <persistence-unit name="EmployeeManager" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>      
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/myCoffeeJPA"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
             <property name="hibernate.connection.username" value="root" />
             <property name="hibernate.connection.password" value="1234" />
@@ -18,6 +12,6 @@
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="hbm2ddl.auto" value="update" />
-        </properties>
-    </persistence-unit>
+    </properties>
+  </persistence-unit>
 </persistence>
